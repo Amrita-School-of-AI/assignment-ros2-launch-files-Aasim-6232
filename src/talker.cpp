@@ -14,7 +14,6 @@ public:
     Talker()
         : Node("talker"), count_(0)
     {
-        // Declare parameter with default value
         this->declare_parameter("message_prefix", "Hello");
 
         publisher_ = this->create_publisher<std_msgs::msg::String>("/chatter", 10);
@@ -44,3 +43,4 @@ int main(int argc, char *argv[])
     rclcpp::shutdown();
     return 0;
 }
+
